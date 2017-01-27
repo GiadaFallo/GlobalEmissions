@@ -183,7 +183,7 @@ function drawPieChart(filling) {
 	var emissionInvolved = getInfoFromFilling(filling);
 
 	$('#spaceForGraph')
-		.append('<div id="divForPieChart" style="display:flex;"><div><svg id="lineChartVisualization" width="900" height="400"></svg></div></div>');
+		.append('<div id="divForPieChart" style="display:flex;"><div style="width:50%;"><svg id="lineChartVisualization" width="900" height="400"></svg></div></div>');
 
 	$('#normalChart').append('<h4 id="infoTitle">' + emissionInvolved.textToShow + ' of ' + '<strong>' + GEO.name + '</strong></h4>');
 
@@ -218,12 +218,12 @@ function drawPieChart(filling) {
 	if (filling === "GHGEmissionsPerCapita" && dataForLinesChart.length != 0)
 
 		$("#divForPieChart")
-		.append("<div id='pieChartInfo'><div style='padding:15px;'><h4 style='text-align: center;'>GHG emissions by main source sectors of <strong>" + GEO.name + ' in ' + selectedYear + "</strong></h4></div></div>");
+		.append("<div id='pieChartInfo' style='width:50%;'><div style='padding:15px;'><h4 style='text-align: center;'>GHG emissions by main source sectors of <strong>" + GEO.name + ' in ' + selectedYear + "</strong></h4></div></div>");
 
 
 	if (filling === "CO2EmissionsPerCapita" && dataForLinesChart.length != 0)
 		$("#divForPieChart")
-		.append("<div id='pieChartInfo'><div style='padding:15px;'><h4 style='text-align: center;'>CO2 emissions by energy's sub-sectors of <strong>" + GEO.name + ' in ' + selectedYear + "</strong></h4></div></div>");
+		.append("<div id='pieChartInfo' style='width:50%;'><div style='padding:15px;'><h4 style='text-align: center;'>CO2 emissions by energy's sub-sectors of <strong>" + GEO.name + ' in ' + selectedYear + "</strong></h4></div></div>");
 
 	var width = 450;
 	var height = 450;
